@@ -45,8 +45,13 @@ function processSymbol(symbol){
             }
             mathOperation(parseInt(buffer));
             previousOperator = null;
-            buffer = total;
-            total = 0;
+            if (total.toString().length > 10){
+                buffer = total.toString().substring(0, 10);
+            }
+            else{
+                buffer = total;
+                total = 0;
+            }
             break;
         case "+":
         case "-":
