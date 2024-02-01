@@ -47,6 +47,7 @@ function processSymbol(symbol){
             previousOperator = null;
             if (total.toString().length > 10){
                 buffer = total.toString().substring(0, 10);
+                alert("The result is truncated, it may not be accurate. Sorry for the inconvenience!");
             }
             else{
                 buffer = total;
